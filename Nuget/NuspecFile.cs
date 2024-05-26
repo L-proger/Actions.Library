@@ -29,7 +29,8 @@ namespace Actions.Nuget {
             package.Metadata.Description = description;
             package.Metadata.Tags = string.Join(" ", tags);
             package.Metadata.License = new PackageMetadataLicense();
-            package.Metadata.License.Value = license; 
+            package.Metadata.License.Value = license;
+            package.Metadata.License.Type = "expression";
         }
 
         public void Serialize(Stream outStream) {

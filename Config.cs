@@ -26,5 +26,8 @@ namespace Actions.Library {
 
         public static string? Nuget_RepoAuth { get { return Get(); } set { Set(value); } }
         public static string? Nuget_RepoName { get { return Get(); } set { Set(value); } }
+
+        public static string? ArtifactsOutputDirectory { get { var result = Get(); return string.IsNullOrWhiteSpace(result) ? ".artifacts" : result; } set { Set(value); } }
+
     }
 }

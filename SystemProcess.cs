@@ -18,7 +18,7 @@ namespace Actions.Library {
             }
         }
 
-        public static Result Run(string executablePath, string arguments, string workingDirectory) {
+        public static Result Run(string executablePath, string arguments, string? workingDirectory = null) {
             Result result = new Result();
 
             Process process = new Process();
